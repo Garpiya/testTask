@@ -7,7 +7,17 @@ MyApp.controller("ProductsCtrl", function($scope, $http) {
     });
 
     $scope.removeRow = function(id){        
-      var index = -1;   
+    	var index = -1; 	
+	  	var productsArray = eval( $scope.products );
+		for( var i = 0; i < productsArray.length; i++ ) {
+			if( productsArray[i].id === id ) {
+				index = i;
+				break;
+			}
+		}
+		if( index === -1 ) {
+			alert( "Something gone wrong" );
+		}  
       $scope.products.splice( index, 1 );    
   };
 });

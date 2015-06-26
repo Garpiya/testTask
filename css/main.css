@@ -1,5 +1,5 @@
 body {
-    background: url(/image/vision-headerPattern2.jpg) repeat !important;
+    background: url(../image/bg.jpg) repeat !important;
     width: 80%;
     margin: auto;
     box-sizing: border-box;
@@ -11,12 +11,6 @@ body {
     float: right;
     width: 50%;
 }
-
-/*h3:before {
-    background-color: green;
-    padding: 0 20px;
-    content: " ";
-}*/
 
 .list-group {
     width: 80%;
