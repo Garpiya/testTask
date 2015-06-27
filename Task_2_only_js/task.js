@@ -65,13 +65,12 @@ getJSON ('products.json', function(data) {
             e = e || window.event;
             return e.target || e.srcElement; 
         }
-        for (i = 0; i < data.length; i++){
+        for (i = 0; i < data.length; i++) {
             aHide = document.getElementsByClassName('notif-close')[i];
             aHide.onclick = function(event) {
                 var target = getEventTarget(event);
                 target.parentNode.parentNode.setAttribute('style','display:none;');           
             };
-
         }
 
 }, function(status) {
