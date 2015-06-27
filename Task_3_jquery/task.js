@@ -24,7 +24,7 @@ getJSON ('products.json', function(data) {
     var ulContainer = document.createElement('ul'), title, description, price, image,
         p = document.createElement('p'), pPrice = document.createElement('p'),  li = document.createElement('li'), 
         h6 = document.createElement('h6'), divControls = document.createElement('div'),
-        aClose = document.createElement('a'), j = 0, img = document.createElement('img'), i = 0;
+        aClose = document.createElement('a'), j = 0, img = document.createElement('img');
 
 
         for (j = 0; j < 4; j++) {
@@ -61,19 +61,10 @@ getJSON ('products.json', function(data) {
         };
         document.body.appendChild(ulContainer);
 
-        function getEventTarget(e) {
-            e = e || window.event;
-            return e.target || e.srcElement; 
-        }
-        for (i = 0; i < data.length; i++){
-            aHide = document.getElementsByClassName('notif-close')[i];
-            aHide.onclick = function(event) {
-                var target = getEventTarget(event);
-                target.parentNode.parentNode.setAttribute('style','display:none;');           
-            };
-
-        }
-
+        var ul = document.querySelector('.container');
+        ul.addEventListener('click', function(e) {
+          e.target.parentNode.parentNode.setAttribute('style','display:none;');
+        });
 }, function(status) {
     alert('Something went wrong.');
 });

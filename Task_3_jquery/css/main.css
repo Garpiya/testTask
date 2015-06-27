@@ -229,7 +229,6 @@ body {
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
-  cursor: pointer;
 }
 
 .notif-close:before, .notif-close:after {
