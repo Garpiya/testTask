@@ -1,0 +1,154 @@
+@font-face {
+  font-family: PT-SANS;
+  src: url(../fonts/PTC55F.ttf); }
+* {
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none !important; }
+
+.label {
+  background-color: black;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.priceTag {
+  font-weight: 800;
+  float: right;
+  margin-right: 1.5em;
+}
+
+.row {
+  border-bottom: 1px #ccc solid;
+}
+
+
+table {
+  border: 1px solid #ccc; }
+
+/* ---------->>> desctop 1024px <<<-----------*/
+@media screen and (min-width: 993px) {
+  body {
+    font: normal 1.2em   Arial, Lucida Grande, Helvetica, sans-serif;
+    margin-top: 2em; }
+  h1 {
+    color: #002c78;
+    font-size: 2.7em;
+    letter-spacing: -1.1px; }
+
+  section > p {
+    font-style: italic;
+    color: #999999;
+    font-size: 1.5em;
+    letter-spacing: -0.9px; }
+
+  h2 {
+    color: #002c78;
+    xfont-size: 1.250em;
+    font-size: 1.410em; }
+
+  .img_corect {
+    max-height: 100%;
+    background-size: contain; }
+
+  article {
+    background: #ecd8c4;
+    float: none;
+    width: 100%;
+    padding: 1% 0% 1% 6%;
+    margin-top: 40px; }
+    article a {
+      text-decoration: underline;
+      height: 1px;
+      color: #002c78; }
+    article p {
+      font: normal 1.2em Lucida, Arial, Helvetica, sans-serif;
+      color: #333333;
+      padding-top: 0.5em;
+      padding-bottom: 1.375em; }
+    article :last-of-type {
+      margin-right: 0%; }
+
+  section > img {
+    width: 100%;
+    margin: auto; }
+ }
+/* ---------->>> tablet 748px <<<-----------*/
+@media only screen and (max-width: 992px) {
+  body {
+    font: normal 0.750em   Arial, Lucida Grande, Helvetica, sans-serif; }
+
+  header {
+    height: auto;
+    line-height: 4em; }
+
+  section > p {
+    font-style: italic;
+    color: #999999;
+    line-height: 1.35;
+    font-size: 2.4em;
+    margin-bottom: 50px; }
+
+  h2 {
+    color: #002c78;
+    font-size: 2.15em; }
+
+  .img_corect {
+    padding-right: 2.857142857142857%;
+    xfloat: left; }
+
+  article {
+    background: #ecd8c4;
+    padding: 0% 2% 2.571428571428571% 2.571428571428571%;
+    overflow: hidden; }
+    article a {
+      text-decoration: underline;
+      height: 1px;
+      color: #002c78; }
+    article p {
+      font: normal 1.7em Arial, Helvetica, sans-serif;
+      color: #333333;
+      padding: 8px; }
+
+  section > img {
+    margin: auto; }
+
+ }
+/* ---------->>> mobile 320px <<<-----------*/
+@media only screen and (max-width: 768px) {
+  body {
+    font: normal 0.750em   Arial, Lucida Grande, Helvetica, sans-serif; }
+
+  header {
+    height: auto; }
+
+  
+  section > p {
+    display: none; }
+
+  h2 {
+    color: #002c78;
+    font-size: 2.25em; }
+
+  .img_corect {
+    background-size: contain;
+    width: 100%; }
+
+  article {
+    background: #ecd8c4;
+    float: none;
+    padding: 5% 2% 8% 6%;
+    margin-top: 40px; }
+    article a {
+      text-decoration: underline;
+      height: 1px;
+      color: #002c78; }
+    article p {
+      font: normal 2.2em Lucida, Arial, Helvetica, sans-serif;
+      color: #333333;
+      padding-top: 1em; }
+ }
