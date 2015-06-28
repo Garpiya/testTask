@@ -1,19 +1,22 @@
 $(function (){
 	var $divRow = $('.row'), $item = $('article');
 
+	var itemTemplate = "<div class='col-xs-12 col-sm-12 col-md-4'>" +
+           "<article>"+
+                "<h2><a> {{title}} </a></h2>" +
+                "<img src='{{image}}' class='img_corect'>" + 
+                "<p> {{description}} </p>" +
+                "<p class='priceTag'>{{price}}</p>" +
+                "<span class='label label-important'>Close</span>" +
+            "</article> " +
+          "</div>";
+
 	$.ajax({
 		type: 'GET',
 		url: 'products.json',
 		success: function(itemTv) {
 			$.each(itemTv, function(i, item) {
-				$divRow.append(' <div class="col-xs-12 col-sm-12  col-md-4">' );
-				// $item.addClass('col-md-4');
-				$item.append('<a><h2>' + item.title + '</h2></a>' + "<p class='priceTag'>" + item.price + "</p>");
-				$item.append('<img class="img_corect"  src =' + item.image + '>');
-				$item.append('<p>' + item.description + '</p>');
-				// $item.append("<p class='priceTag'>" + item.price + "</p>");
-				$item.append('<span class="label label-important" id="removeItem">Close</span> ');
-
+				$divRow.append(Mustache.render(itemTemplate, item));
 			});
 		},
 		error: function() {
@@ -22,6 +25,6 @@ $(function (){
 	});
 
 	$('#removeItem').on('click', function(){
-		
+		alert(this.item.id);
 	});
 });
