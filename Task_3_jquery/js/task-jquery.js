@@ -7,7 +7,7 @@ $(function (){
                 "<img src='{{image}}' class='img_corect'>" + 
                 "<p> {{description}} </p>" +
                 "<p class='priceTag'>{{price}}</p>" +
-                "<span class='label label-important'>Close</span>" +
+                "<span class='label label-important' id='removeItem'>Close</span>" +
             "</article> " +
           "</div>";
 
@@ -18,13 +18,17 @@ $(function (){
 			$.each(itemTv, function(i, item) {
 				$divRow.append(Mustache.render(itemTemplate, item));
 			});
+			$( "span" ).click( function(e){
+      			e.preventDefault();
+    		$(this).parent().hide("fast");
+    		});
 		},
 		error: function() {
 			alert('Something went wrong.');
 		}
 	});
 
-	$('#removeItem').on('click', function(){
-		alert(this.item.id);
-	});
+
+
+
 });
