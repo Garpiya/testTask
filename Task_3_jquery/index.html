@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-        $.getJSON("products.json", function(result){
-            $.each(result, function(i, field){
-                $("div").append(field.title + " ");
-            });
-        });
-});
-</script>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>index</title>
+        <meta name="description" content="">
+        <meta name="author" content="Yaroslava">
+        <link rel="stylesheet" href="css/normalize.css" />        
+        <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<div></div>
-
-</body>
+    <body> 
+      <div class="container">
+        <div class="row">
+        </div> 
+      </div>
+       <script src="js/jquery.min.js"></script>  
+       <script src="js/task-jquery.js"></script>  
+       <script src="js/mustache.js"></script>  
+   </body>
 </html>
